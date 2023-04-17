@@ -1,14 +1,19 @@
 .siteHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 80px;
     padding: 0 20px;
     background-color: #333;
   }
+
+  .siteContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
   
-  .siteLogo img {
-    height: 50px;
+  .siteLogo h4 {
+    color: white;
   }
   
   .menuToggle {
@@ -55,6 +60,28 @@
   .siteNavigation a:hover {
     text-decoration: underline;
   }
+
+  .siteToggleNavigation{
+    position: absolute;
+    background-color: white;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+
+  .siteToggleNavigation ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .siteToggleNavigation li{
+    border-bottom: 1px solid rgb(184, 184, 184);
+    padding: 7px 0 7px 24px;
+  }
   
   .siteSearch form {
     display: flex;
@@ -72,6 +99,29 @@
     background-color: #fff;
     border: none;
     color: #333;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .siteSearchToggle form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(184, 183, 183);
+  }
+
+  .siteSearchToggle input[type="text"]{
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+
+  .siteSearchToggle button{
+    padding: 5px;
+    background-color: #333;
+    border: none;
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
   }
@@ -98,5 +148,17 @@
     .siteNavigation li {
       margin-right: 0;
       margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .siteSearch {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 480px){
+    .siteSearchToggle{
+      display: none;
     }
   }
