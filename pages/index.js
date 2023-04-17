@@ -5,6 +5,7 @@ import Layout, { siteTitle } from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Date from "../components/date";
+import Main from "../components/main";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -21,7 +22,7 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
+      {/* <section className={utilStyles.headingMd}>
         <p>[Your self introduction]</p>
         <p>
           (This is a sample website - you’ll be building a site like this on{" "}
@@ -41,7 +42,8 @@ export default function Home({ allPostsData }) {
             </li>
           ))}
         </ul>
-      </section>
+      </section> */}
+      <Main></Main>
     </Layout>
   );
 }
