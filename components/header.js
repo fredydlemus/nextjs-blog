@@ -43,7 +43,7 @@ export default function Header() {
             </div>
             <ul>
               {categories.map((category) => (
-                <li>
+                <li key={category.name}>
                   <Link href={category.slug}>{category.name}</Link>
                 </li>
               ))}
@@ -53,7 +53,7 @@ export default function Header() {
         <nav className={styles.siteNavigation}>
           <ul>
             {categories.map((category) => (
-              <li>
+              <li key={category.name}>
                 <Link href={category.slug}>{category.name}</Link>
               </li>
             ))}
