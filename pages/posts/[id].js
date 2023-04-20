@@ -4,6 +4,8 @@ import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
 import styles from "./id.module.css";
+import ReactMarkdown from "react-markdown";
+import rehypePrism from "@mapbox/rehype-prism";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -34,10 +36,11 @@ export default function Post({ postData }) {
           <Date dateString={postData.date} />
         </div>
       </article>
-      <div
-        className={styles.postContainer}
-        dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-      ></div>
+      <div className={styles.postContainer}>
+        <ReactMarkdown components={{}} rehypePlugins={[rehypePrism]}>
+          {postData.contentMarkdown}
+        </ReactMarkdown>
+      </div>
     </Layout>
   );
 }

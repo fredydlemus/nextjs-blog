@@ -16,19 +16,6 @@
     background-color: white;
 }
 
-.postContainer pre{
-    max-width: 1000px;
-    margin: 0 auto;
-    border-bottom: 1px solid gray;
-    border-top: 1px solid gray;
-}
-
-.postContainer code{
-    background-color: aquamarine;
-    font-size: 12px;
-    font-weight: bold;
-}
-
 .postContainer img{
     max-width: 1000px;
     margin: 0 auto;
