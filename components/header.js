@@ -3,6 +3,7 @@ import styles from "./header.module.css";
 import Link from "next/link";
 import { categories } from "../lib/categories";
 import { BiMenu } from "react-icons/bi";
+import { CgClose } from "react-icons/cg";
 
 export default function Header() {
   const [isMenuToggleOpen, setMenuToggleOpen] = useState(false);
@@ -19,12 +20,21 @@ export default function Header() {
             <h4>fredydlemus.blog</h4>
           </Link>
         </div>
-        <BiMenu
-          onClick={toggleMenu}
-          color="white"
-          size="2em"
-          className={styles.menuToggle}
-        />
+        {isMenuToggleOpen ? (
+          <CgClose
+            onClick={toggleMenu}
+            color="white"
+            size="2em"
+            className={styles.menuToggle}
+          />
+        ) : (
+          <BiMenu
+            onClick={toggleMenu}
+            color="white"
+            size="2em"
+            className={styles.menuToggle}
+          />
+        )}
         {isMenuToggleOpen && (
           <div className={styles.siteToggleNavigation}>
             <div className={styles.siteSearchToggle}>
