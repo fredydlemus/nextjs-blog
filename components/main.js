@@ -1,7 +1,8 @@
 import styles from "./main.module.css";
 import Link from "next/link";
+import Date from "../components/date";
 
-export default function Main() {
+export default function Main({ allPostsData }) {
   return (
     <main className={styles.siteMain}>
       <section className={styles.featured}>
@@ -27,33 +28,20 @@ export default function Main() {
       </section>
       <section className={styles.latestPosts}>
         <h2>Últimos artículos</h2>
-        <div className={styles.post}>
-          <Link href="#">
-            <img src="" alt="Post 1" />
-          </Link>
-          <h3>
-            <Link href="#">Título del artículo 1</Link>
-          </h3>
-          <p>Descripción del artículo 1</p>
-        </div>
-        <div className={styles.post}>
-          <Link href="#">
-            <img src="" alt="Post 1" />
-          </Link>
-          <h3>
-            <Link href="#">Título del artículo 2</Link>
-          </h3>
-          <p>Descripción del artículo 2</p>
-        </div>
-        <div className={styles.post}>
-          <Link href="#">
-            <img src="" alt="Post 1" />
-          </Link>
-          <h3>
-            <Link href="#">Título del artículo 3</Link>
-          </h3>
-          <p>Descripción del artículo 3</p>
-        </div>
+        {allPostsData.map(({ id, date, title }) => (
+          <div className={styles.post} key={id}>
+            <Link href={`/posts/${id}`}>
+              <img src="" alt="Post 1" />
+            </Link>
+            <h3>
+              <Link href={`/posts/${id}`}>{title}</Link>
+            </h3>
+            <small className={styles.lightText}>
+              <Date dateString={date} />
+            </small>
+            <p>Descripción del artículo 1</p>
+          </div>
+        ))}
       </section>
     </main>
   );

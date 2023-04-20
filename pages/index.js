@@ -43,7 +43,7 @@ export default function Home({ allPostsData }) {
           ))}
         </ul>
       </section> */}
-      <Main></Main>
+      <Main allPostsData={allPostsData}></Main>
     </Layout>
   );
 }
