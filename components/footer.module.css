@@ -7,6 +7,8 @@
   .footerWidgets {
     display: flex;
     flex-wrap: wrap;
+    max-width: 1024px;
+    margin: 0 auto;
   }
   
   .footerWidget {
@@ -32,8 +34,15 @@
   .footerWidget a {
     color: #fff;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
   }
-  
+
+  .footerWidget a:hover {
+    color: #76b6ff;
+  }
+
   .siteInfo {
     text-align: center;
     margin-top: 20px;

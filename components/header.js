@@ -1,17 +1,8 @@
 import { useState } from "react";
 import styles from "./header.module.css";
 import Link from "next/link";
-
-const categories = [
-  {
-    name: "Inicio",
-    slug: "/",
-  },
-  {
-    name: "Angular",
-    slug: "/angular",
-  },
-];
+import { categories } from "../lib/categories";
+import { BiMenu } from "react-icons/bi";
 
 export default function Header() {
   const [isMenuToggleOpen, setMenuToggleOpen] = useState(false);
@@ -28,11 +19,12 @@ export default function Header() {
             <h4>fredydlemus.blog</h4>
           </Link>
         </div>
-        <button onClick={toggleMenu} className={styles.menuToggle}>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+        <BiMenu
+          onClick={toggleMenu}
+          color="white"
+          size="2em"
+          className={styles.menuToggle}
+        />
         {isMenuToggleOpen && (
           <div className={styles.siteToggleNavigation}>
             <div className={styles.siteSearchToggle}>
@@ -42,9 +34,12 @@ export default function Header() {
               </form>
             </div>
             <ul>
-              {categories.map((category) => (
-                <li key={category.name}>
-                  <Link href={category.slug}>{category.name}</Link>
+              {categories.map(({ name, slug, icon }) => (
+                <li key={name}>
+                  <Link href={slug}>
+                    {icon}
+                    {name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -52,9 +47,12 @@ export default function Header() {
         )}
         <nav className={styles.siteNavigation}>
           <ul>
-            {categories.map((category) => (
-              <li key={category.name}>
-                <Link href={category.slug}>{category.name}</Link>
+            {categories.map(({ name, slug, icon }) => (
+              <li key={name}>
+                <Link href={slug}>
+                  {icon}
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>

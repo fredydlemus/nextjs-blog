@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "./header";
 import Footer from "./footer";
+import { links } from "../lib/links";
 
 const name = "John Doe";
 export const siteTitle = "fredydlemus.blog";
@@ -70,7 +71,7 @@ export default function Layout({ children, home }) {
         )}
       </div> */}
       {children}
-      <Footer />
+      <Footer links={links} />
     </>
   );
 }

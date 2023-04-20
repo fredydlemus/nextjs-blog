@@ -1,55 +1,27 @@
 import styles from "./footer.module.css";
-import Link from "next/link";
 
-export default function Footer() {
+export default function Footer({ links }) {
   return (
     <footer className={styles.siteFooter}>
       <div className={styles.footerWidgets}>
-        <div className={styles.footerWidget}>
-          <h3>Widget 1</h3>
-          <ul>
-            <li>
-              <Link href="#">Enlace 1</Link>
-            </li>
-            <li>
-              <Link href="#">Enlace 2</Link>
-            </li>
-            <li>
-              <Link href="#">Enlace 3</Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.footerWidget}>
-          <h3>Widget 2</h3>
-          <ul>
-            <li>
-              <Link href="#">Enlace 1</Link>
-            </li>
-            <li>
-              <Link href="#">Enlace 2</Link>
-            </li>
-            <li>
-              <Link href="#">Enlace 3</Link>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.footerWidget}>
-          <h3>Widget 3</h3>
-          <ul>
-            <li>
-              <Link href="#">Enlace 1</Link>
-            </li>
-            <li>
-              <Link href="#">Enlace 2</Link>
-            </li>
-            <li>
-              <Link href="#">Enlace 3</Link>
-            </li>
-          </ul>
-        </div>
+        {links.map(({ title, links }) => (
+          <div className={styles.footerWidget} key={title}>
+            <h3>{title}</h3>
+            <ul>
+              {links.map(({ href, icon, label }) => (
+                <li key={href}>
+                  <a href={href} target="_blank">
+                    {icon}
+                    {label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
       <div className={styles.siteInfo}>
-        <p>Derechos de autor © 2023 - Sitio web de ejemplo</p>
+        <p>2023 - fredydlemus</p>
       </div>
     </footer>
   );
