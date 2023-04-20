@@ -85,9 +85,6 @@
   }
   
   @media screen and (min-width: 1024px) {
-    .siteMain {
-      padding: 40px;
-    }
     .postContainer{
       grid-template-columns: 1fr 1fr;
       grid-gap: 50px;

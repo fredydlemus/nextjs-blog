@@ -1,0 +1,50 @@
+.postTitle{
+    padding: 80px 20px 40px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.postTitle h1{
+    margin-bottom: 20px;
+}
+
+.postContainer{
+    padding: 0 20px 40px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.postContainer pre{
+    max-width: 1000px;
+    margin: 0 auto;
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.postContainer code{
+    background-color: aquamarine;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.postContainer img{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+}
+
+@media screen and (min-width: 768px) {
+    .postContainer pre{
+        border: 1px solid gray;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .postContainer code{
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
+    
