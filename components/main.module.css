@@ -1,9 +1,16 @@
 .siteMain {
     padding: 40px 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+    background-color: white;
   }
   
   .featured {
     margin-bottom: 40px;
+  }
+
+  .postContainer{
+    display: grid;
   }
   
   .featured h2 {
@@ -33,12 +40,16 @@
   
   .post {
     margin-bottom: 40px;
+    border-bottom: 1px solid gray;
   }
   
   .post img {
     width: 100%;
     height: auto;
+    margin: 0 auto;
     margin-bottom: 10px;
+    max-width: 500px;
+    border-radius: 20px;
   }
   
   .post h3 {
@@ -73,3 +84,16 @@
     }
   }
   
+  @media screen and (min-width: 1024px) {
+    .siteMain {
+      padding: 40px;
+    }
+    .postContainer{
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+    }
+    
+    .post{
+      margin-bottom: 0;
+    }
+  }
