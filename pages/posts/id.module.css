@@ -1,6 +1,6 @@
 .postTitle{
     padding: 80px 20px 40px 20px;
-    max-width: 1280px;
+    max-width: 1024px;
     margin: 0 auto;
     background-color: white;
 }
@@ -11,7 +11,7 @@
 
 .postContainer{
     padding: 0 20px 40px 20px;
-    max-width: 1280px;
+    max-width: 1024px;
     margin: 0 auto;
     background-color: white;
 }
@@ -20,6 +20,10 @@
     max-width: 1000px;
     margin: 0 auto;
     display: block;
+}
+
+.backToHome{
+    margin: 3rem 0 0;
 }
 
 @media screen and (min-width: 768px) {

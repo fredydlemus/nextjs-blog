@@ -7,69 +7,28 @@ import Header from "./header";
 import Footer from "./footer";
 import { links } from "../lib/links";
 
-const name = "John Doe";
+const name = "Fredy Flores";
 export const siteTitle = "fredydlemus.blog";
 
 export default function Layout({ children, home }) {
   return (
     <>
       <Header />
-      {/* <div className={styles.container}>
-        <Head>
-          <link rel="icon" href="/favicon.ico"></link>
-          <meta
-            name="description"
-            content="Learn how to build a personal website using Next.js"
-          />
-          <meta
-            property="og:image"
-            content={`https://og-image.vercel.app/${encodeURI(
-              siteTitle
-            )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-          />
-          <meta name="og:title" content={siteTitle} />
-          <meta name="twitter:card" content="summary_large_image" />
-        </Head>
-        <header className={styles.header}>
-          {home ? (
-            <>
-              <Image
-                priority
-                src="/images/profile.jpg"
-                className={utilStyles.borderCircle}
-                height={144}
-                width={144}
-                alt={name}
-              />
-              <h1 className={utilStyles.heading2X1}>{name}</h1>
-            </>
-          ) : (
-            <>
-              <Link href="/">
-                <Image
-                  priority
-                  src="/images/profile.jpg"
-                  className={utilStyles.borderCicle}
-                  height={108}
-                  width={108}
-                  alt={name}
-                />
-              </Link>
-              <h2 className={utilStyles.headingLg}>
-                <Link href="/" className={utilStyles.colorInherit}>
-                  {name}
-                </Link>
-              </h2>
-            </>
-          )}
-        </header>
-        <main>{children}</main>
-        {!home && (
-          <div className={styles.backToHome}>
-            <Link href="/">← Back to home</Link>
-          </div>
-        )}
-      </div> */}
+      <Head>
+        <link rel="icon" href="/images/binary-code.png"></link>
+        <meta
+          name="description"
+          content="Learn how to build a personal website using Next.js"
+        />
+        <meta
+          property="og:image"
+          content={`https://og-image.vercel.app/${encodeURI(
+            siteTitle
+          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+        />
+        <meta name="og:title" content={siteTitle} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
       {children}
       <Footer links={links} />
     </>

@@ -6,6 +6,7 @@ import utilStyles from "../../styles/utils.module.css";
 import styles from "./id.module.css";
 import ReactMarkdown from "react-markdown";
 import rehypePrism from "@mapbox/rehype-prism";
+import Link from "next/link";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -40,6 +41,9 @@ export default function Post({ postData }) {
         <ReactMarkdown components={{}} rehypePlugins={[rehypePrism]}>
           {postData.contentMarkdown}
         </ReactMarkdown>
+        <div className={styles.backToHome}>
+          <Link href="/">Regresar al inicio</Link>
+        </div>
       </div>
     </Layout>
   );
