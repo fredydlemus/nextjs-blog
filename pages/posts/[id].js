@@ -30,6 +30,7 @@ export default function Post({ postData }) {
     <Layout>
       <Head>
         <title>{postData.title}</title>
+        <meta name="description" content={postData.description} />
       </Head>
       <article className={styles.postTitle}>
         <h1 className={styles.title}>{postData.title}</h1>

@@ -16,11 +16,7 @@ export default function Layout({ children, home }) {
       <Header />
       <Head>
         <link rel="icon" href="/images/binary-code.png"></link>
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta property="og:image" content={"/images/profile.jpg"} />
+        <meta property="og:image" content={"/images/me.jpeg"} />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
