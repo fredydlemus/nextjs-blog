@@ -31,6 +31,7 @@ export default function Post({ postData }) {
       <Head>
         <title>{postData.title}</title>
         <meta name="description" content={postData.description} />
+        <meta property="og:image" content={postData.image} />
       </Head>
       <article className={styles.postTitle}>
         <h1 className={styles.title}>{postData.title}</h1>
@@ -42,9 +43,6 @@ export default function Post({ postData }) {
         <ReactMarkdown components={{}} rehypePlugins={[rehypePrism]}>
           {postData.contentMarkdown}
         </ReactMarkdown>
-        <div className={styles.backToHome}>
-          <Link href="/">Regresar al inicio</Link>
-        </div>
       </div>
     </Layout>
   );

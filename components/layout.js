@@ -16,11 +16,15 @@ export default function Layout({ children, home }) {
       <Header />
       <Head>
         <link rel="icon" href="/images/binary-code.png"></link>
-        <meta property="og:image" content={"/images/me.jpeg"} />
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {children}
+      {!home && (
+        <div className={styles.backToHome}>
+          <Link href="/">Regresar al inicio</Link>
+        </div>
+      )}
       <Footer links={links} />
     </>
   );

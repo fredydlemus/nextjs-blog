@@ -11,5 +11,8 @@
 }
 
 .backToHome{
-    margin: 3rem 0 0;
+    padding: 0 20px 20px;
+    background-color: white;
+    max-width: 1024px;
+    margin: 0 auto;
 }

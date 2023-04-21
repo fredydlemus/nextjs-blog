@@ -44,27 +44,31 @@ export default function Header() {
               </form>
             </div>
             <ul>
-              {categories.map(({ name, slug, icon }) => (
+              {categories.map(({ name, slug, icon, show }) =>
+                show ? (
+                  <li key={name}>
+                    <Link href={slug}>
+                      {icon}
+                      {name}
+                    </Link>
+                  </li>
+                ) : null
+              )}
+            </ul>
+          </div>
+        )}
+        <nav className={styles.siteNavigation}>
+          <ul>
+            {categories.map(({ name, slug, icon, show }) =>
+              show ? (
                 <li key={name}>
                   <Link href={slug}>
                     {icon}
                     {name}
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
-        )}
-        <nav className={styles.siteNavigation}>
-          <ul>
-            {categories.map(({ name, slug, icon }) => (
-              <li key={name}>
-                <Link href={slug}>
-                  {icon}
-                  {name}
-                </Link>
-              </li>
-            ))}
+              ) : null
+            )}
           </ul>
         </nav>
         <div className={styles.siteSearch}>
