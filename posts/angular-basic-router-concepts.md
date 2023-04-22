@@ -2,7 +2,7 @@
 title: "Conceptos básicos de enrutamiento y navegación en aplicaciones web con Angular"
 date: "2023-04-19"
 description: "Desarrollar una aplicación con Angular implica crear una SPA (Single Page Application), donde el servidor envía un archivo HTML vacío y el contenido se renderiza mediante JavaScript. Para agregar diferentes páginas, necesitas el router de Angular, el cual te permite controlar qué componentes se muestran según la ruta en el navegador. En este post, te explicamos todo lo que necesitas saber al respecto. ¡Sigue leyendo!"
-image: "/images/posts/angular-basic-router-concepts/wallpaper.svg"
+image: "/images/posts/angular-wallpaper-2.svg"
 tag: "Angular"
 ---
 
