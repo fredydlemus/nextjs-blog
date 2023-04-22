@@ -26,22 +26,25 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
+  const { title, description, image, date, contentMarkdown, shareImage } =
+    postData;
+
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
-        <meta name="description" content={postData.description} />
-        <meta property="og:image" content={postData.image} />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:image" content={shareImage} />
       </Head>
       <article className={styles.postTitle}>
-        <h1 className={styles.title}>{postData.title}</h1>
+        <h1 className={styles.title}>{title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+          <Date dateString={date} />
         </div>
       </article>
       <div className={styles.postContainer}>
         <ReactMarkdown components={{}} rehypePlugins={[rehypePrism]}>
-          {postData.contentMarkdown}
+          {contentMarkdown}
         </ReactMarkdown>
       </div>
     </Layout>
