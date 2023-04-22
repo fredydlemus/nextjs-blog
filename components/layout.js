@@ -17,7 +17,6 @@ export default function Layout({ children, home }) {
       <Head>
         <link rel="icon" href="/images/binary-code.png"></link>
         <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       {children}
       {!home && (
