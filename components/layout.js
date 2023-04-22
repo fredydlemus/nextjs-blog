@@ -16,7 +16,6 @@ export default function Layout({ children, home }) {
       <Header />
       <Head>
         <link rel="icon" href="/images/binary-code.png"></link>
-        <meta name="og:title" content={siteTitle} />
       </Head>
       {children}
       {!home && (

@@ -38,6 +38,12 @@ export default function Post({ postData }) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={shareImage} />
+        <meta name="og:title" content={title} />
+        <meta name="og:description" content={description} />
+        <meta name="og:image" content={shareImage} />
+        <meta name="og:url" content="https://fredydlemus.blog" />
+        <meta name="og:site_name" content="fredydlemus.blog" />
+        <meta name="og:type" content="website" />
       </Head>
       <article className={styles.postTitle}>
         <h1 className={styles.title}>{title}</h1>
