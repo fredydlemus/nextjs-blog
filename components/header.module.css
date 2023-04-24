@@ -1,0 +1,173 @@
+.siteHeader {
+    height: 80px;
+    padding: 0 20px;
+    position: fixed;
+    width: 100%;
+    backdrop-filter: brightness(0.1);
+    -webkit-backdrop-filter: brightness(0.1);
+    box-shadow: 0px 0px 0 2px var(--dark);
+  }
+
+  .siteContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .siteLogo h4 {
+    color: white;
+  }
+  
+  .menuToggle {
+    display: none;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .siteNavigation {
+    display: flex;
+  }
+  
+  .siteNavigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .siteNavigation li {
+    margin-right: 20px;
+  }
+  
+  .siteNavigation a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .siteNavigation a:hover {
+    text-decoration: underline;
+  }
+
+  .siteToggleNavigation{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    left: 0;
+    top: 80px;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .siteToggleNavigation ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .siteToggleNavigation li{
+    border-bottom: 1px solid rgb(184, 184, 184);
+    padding: 7px 0 7px 24px;
+    background-color: white;
+  }
+
+  .siteToggleNavigation a{
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .siteSearch form {
+    display: flex;
+    align-items: center;
+  }
+  
+  .siteSearch input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+  
+  .siteSearch button {
+    padding: 5px;
+    background-color: #fff;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .siteSearchToggle form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid rgb(184, 183, 183);
+    background-color: white;
+  }
+
+  .siteSearchToggle input[type="text"]{
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+
+  .siteSearchToggle button{
+    padding: 5px;
+    background-color: #333;
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .menuToggle {
+      display: block;
+    }
+    .siteNavigation {
+      position: absolute;
+      top: 80px;
+      left: -200px;
+      width: 200px;
+      background-color: #333;
+      padding: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    .siteNavigation.active {
+      left: 0;
+    }
+    .siteNavigation ul {
+      flex-direction: column;
+    }
+    .siteNavigation li {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .siteSearch {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 480px){
+    .siteSearchToggle{
+      display: none;
+    }
+  }

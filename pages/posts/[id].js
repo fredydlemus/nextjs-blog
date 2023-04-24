@@ -3,6 +3,10 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
+import styles from "./id.module.css";
+import ReactMarkdown from "react-markdown";
+import rehypePrism from "@mapbox/rehype-prism";
+import Link from "next/link";
 
 export async function getStaticPaths() {
   const paths = getAllPostIds();
@@ -22,18 +26,36 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
+  const { title, description, date, contentMarkdown, shareImage } = postData;
+
   return (
     <Layout>
       <Head>
-        <title>{postData.title}</title>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:image" content={shareImage} />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={shareImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="og:title" content={title} />
+        <meta name="og:description" content={description} />
+        <meta name="og:image" content={shareImage} />
+        <meta name="og:url" content="https://fredydlemus.blog" />
+        <meta name="og:site_name" content="fredydlemus.blog" />
+        <meta name="og:type" content="website" />
       </Head>
-      <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+      <article className={styles.postTitle}>
+        <h1 className={styles.title}>{title}</h1>
         <div className={utilStyles.lightText}>
-          <Date dateString={postData.date} />
+          <Date dateString={date} />
         </div>
       </article>
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }}></div>
+      <div className={styles.postContainer}>
+        <ReactMarkdown components={{}} rehypePlugins={[rehypePrism]}>
+          {contentMarkdown}
+        </ReactMarkdown>
+      </div>
     </Layout>
   );
 }

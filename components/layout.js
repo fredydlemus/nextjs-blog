@@ -3,28 +3,25 @@ import utilStyles from "../styles/utils.module.css";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Header from "./header";
+import Footer from "./footer";
+import { links } from "../lib/links";
 
 const name = "Fredy Flores";
+<<<<<<< HEAD
 export const siteTitle = "fredydlemus";
+=======
+export const siteTitle = "fredydlemus.blog";
+>>>>>>> 3775fad7ab57d712a75452d639846a83e87b698c
 
 export default function Layout({ children, home }) {
   return (
-    <div className={styles.container}>
+    <>
+      <Header />
       <Head>
-        <link rel="icon" href="/favicon.ico"></link>
-        <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
-        />
-        <meta
-          property="og:image"
-          content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
-        />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="icon" href="/images/binary-code.png"></link>
       </Head>
+<<<<<<< HEAD
       <header className={styles.header}>
         {home ? (
           <>
@@ -59,11 +56,15 @@ export default function Layout({ children, home }) {
         )}
       </header>
       <main>{children}</main>
+=======
+      {children}
+>>>>>>> 3775fad7ab57d712a75452d639846a83e87b698c
       {!home && (
         <div className={styles.backToHome}>
-          <Link href="/">← Back to home</Link>
+          <Link href="/">Regresar al inicio</Link>
         </div>
       )}
-    </div>
+      <Footer links={links} />
+    </>
   );
 }

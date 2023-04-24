@@ -1,0 +1,39 @@
+.postTitle{
+    padding: 80px 20px 40px 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.postTitle h1{
+    margin-bottom: 20px;
+}
+
+.postContainer{
+    padding: 10px 20px 40px 20px;
+    max-width: 1024px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.postContainer img{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: block;
+    width: 100%;
+}
+
+
+@media screen and (min-width: 768px) {
+    .postContainer pre{
+        border: 1px solid gray;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .postContainer code{
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
+    

@@ -1,9 +1,11 @@
 import Head from "next/head";
+<<<<<<< HEAD
 import Link from "next/link";
+=======
+>>>>>>> 3775fad7ab57d712a75452d639846a83e87b698c
 import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
-import Date from "../components/date";
+import Main from "../components/main";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -18,32 +20,10 @@ export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
+        <meta property="og:image" content={"/images/me.jpeg"} />
         <title>{siteTitle}</title>
       </Head>
-      <section className={utilStyles.headingMd}>
-        <p>
-          ¡Hola! Soy un ingeniero de software con experiencia en el desarrollo
-          de aplicaciones web y me encanta explorar nuevas tecnologías y
-          tendencias en el mundo del desarrollo de software. Me apasiona
-          compartir mi conocimiento con otros. En este blog, compartiré mis
-          conocimientos y experiencias en el campo del desarrollo de
-          aplicaciones web. ¡Espero que disfrutes leyendo mis publicaciones!
-        </p>
-      </section>
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
-          {allPostsData.map(({ id, date, title }) => (
-            <li className={utilStyles.listItem} key={id}>
-              <Link href={`/posts/${id}`}>{title}</Link>
-              <br />
-              <small className={utilStyles.lightText}>
-                <Date dateString={date} />
-              </small>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <Main allPostsData={allPostsData}></Main>
     </Layout>
   );
 }
