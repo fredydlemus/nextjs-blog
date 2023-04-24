@@ -3,7 +3,7 @@ title: "Eleva tu maestría de Angular con el Router: cambia estilos según la ru
 date: "2023-04-20"
 description: "Aprende a personalizar los estilos de tus componentes en función de la ruta en la que te encuentres con la directiva routerLinkActive del Router de Angular. En este post, te explicamos cómo utilizarla para hacer que cada ruta tenga su propio estilo y mejorar así tus aplicaciones de Angular. ¡Empecemos!"
 image: "/images/posts/angular-wallpaper-1.svg"
-shareImage: "/images/posts/angular-wallpaper-1.png"
+shareImage: "/images/posts/code-wallpaper.jpg"
 tag: "Angular"
 ---
 

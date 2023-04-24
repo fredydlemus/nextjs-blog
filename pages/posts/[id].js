@@ -26,8 +26,7 @@ export async function getStaticProps({ params }) {
 }
 
 export default function Post({ postData }) {
-  const { title, description, image, date, contentMarkdown, shareImage } =
-    postData;
+  const { title, description, date, contentMarkdown, shareImage } = postData;
 
   return (
     <Layout>
