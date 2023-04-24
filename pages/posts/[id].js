@@ -37,7 +37,7 @@ export default function Post({ postData }) {
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
         <meta name="twitter:image" content={shareImage} />
-        <meta name="twitter:card" content="summar" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="og:title" content={title} />
         <meta name="og:description" content={description} />
         <meta name="og:image" content={shareImage} />
