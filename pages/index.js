@@ -1,4 +1,8 @@
 import Head from "next/head";
+<<<<<<< HEAD
+import Link from "next/link";
+=======
+>>>>>>> 3775fad7ab57d712a75452d639846a83e87b698c
 import Layout, { siteTitle } from "../components/layout";
 import { getSortedPostsData } from "../lib/posts";
 import Main from "../components/main";
