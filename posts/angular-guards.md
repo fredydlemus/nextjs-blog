@@ -1,9 +1,5 @@
 ---
 title: "Protege tus rutas en Angular con los Guards: ¡controla el acceso y la salida de rutas de manera eficiente!"
-<<<<<<< HEAD
-date: "2023-04-13"
----
-=======
 date: "2023-04-20"
 description: "Si buscas una forma de aumentar la seguridad de tu aplicación Angular, los Guards son una herramienta clave para controlar el acceso a tus rutas. En este blog, te explicamos cómo funcionan los Guards y cómo puedes utilizarlos para verificar quién tiene acceso a qué rutas. Además, te mostraremos cómo redirigir a usuarios no autorizados a otras partes de tu aplicación. ¡Aprende todo lo que necesitas saber sobre los Guards en Angular aquí!"
 image: "/images/posts/angular-wallpaper-3.svg"
@@ -131,4 +127,3 @@ const appRoutes: Routes = [
 En este post hemos aprendido cómo asegurar nuestras rutas en Angular utilizando Guards. Hemos visto cómo utilizar los Guards CanActivate y CanDeactivate para controlar el acceso y la salida de las rutas, respectivamente. Además, hemos visto cómo implementar estos Guards y cómo aplicarlos en la configuración de las rutas.
 
 Con esto, ya sabes cómo proteger tus rutas en Angular y puedes aplicar esta técnica para asegurar que solo se accede o se abandona una ruta bajo ciertas condiciones específicas. Esto te permitirá tener mayor control sobre el flujo de tu aplicación y asegurar que solo se accede a ciertas áreas o se realizan ciertas acciones si se cumplen ciertos requisitos previamente definidos. ¡Espero que hayas disfrutado aprendiendo sobre este tema!
->>>>>>> 3775fad7ab57d712a75452d639846a83e87b698c
