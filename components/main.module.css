@@ -40,21 +40,27 @@
   
   .post {
     margin-bottom: 40px;
-    border-bottom: 1px solid gray;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px 15px 30px 15px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
   }
   
   .post img {
     width: 100%;
-    height: auto;
+    height: 200px;
     margin: 0 auto;
     margin-bottom: 10px;
-    max-width: 400px;
-    border-radius: 20px;
+    max-width: none;
+    border-radius: 10px;
   }
   
   .post h3 {
-    font-size: 24px;
+    font-size: 32px;
     margin-bottom: 10px;
+    line-height: 36px;
   }
 
     
@@ -73,14 +79,15 @@
       margin-right: 20px;
     }
   
-    .latestPosts {
-     
-      margin-left: 20px;
-    }
-  
     .featuredPost:last-child,
     .post:last-child {
       margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 768px){
+    .post img{
+      height: 300px;
     }
   }
   
@@ -92,5 +99,6 @@
     
     .post{
       margin-bottom: 0;
+      padding: 20px 30px 30px 30px;
     }
   }
