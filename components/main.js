@@ -10,20 +10,26 @@ export default function Main({ allPostsData }) {
       <section>
         <h2>Últimos artículos</h2>
         <div className={styles.postContainer}>
-          {allPostsData.map(({ id, date, title, description, shareImage }) => (
-            <div className={styles.post} key={id}>
-              <Link href={`/posts/${id}`}>
-                <Image src={shareImage} width={144} height={144} />
-              </Link>
-              <h3>
-                <Link href={`/posts/${id}`}>{title}</Link>
-              </h3>
-              <small className={styles.lightText}>
-                <Date dateString={date} />
-              </small>
-              <p>{description}</p>
-            </div>
-          ))}
+          {allPostsData.map(
+            ({ id, date, title, description, shareImage, enable }) => {
+              if (enable !== false) {
+                return (
+                  <div className={styles.post} key={id}>
+                    <Link href={`/posts/${id}`}>
+                      <Image src={shareImage} width={144} height={144} />
+                    </Link>
+                    <h3>
+                      <Link href={`/posts/${id}`}>{title}</Link>
+                    </h3>
+                    <small className={styles.lightText}>
+                      <Date dateString={date} />
+                    </small>
+                    <p>{description}</p>
+                  </div>
+                );
+              }
+            }
+          )}
         </div>
       </section>
     </main>
